@@ -1,0 +1,567 @@
+// header,
+.welcome,
+// footer,
+.home-doctor,
+.home-aboutus,
+.home-featured-procedures,
+.home-featured-breast,
+.home-patients
+ {
+ 	display: none !important;
+}
+ 	
+
+ .home h2 {
+ 	margin: 0;
+ 	font-family: $secondaryFont;
+ 	@include media($desktop) {
+ 		font-size: 50px;
+ 		line-height: 55px;
+ 	}
+ }
+
+
+
+/*===============================================
+=            Welcome to my Website!             =
+===============================================*/
+
+.welcome-parallax {
+	@include media($desktop) {
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	@include media(1660px) {
+		background-position: center center;
+		background-size: cover;
+		background-color: #e9f1ed;
+	}
+}
+
+.welcome {
+	background: #fff url("images/bg-welcome.jpg") top right no-repeat;
+	background-size: 760px auto;
+	background-position-y: -40px; 
+		background-position-x: right 0; 
+	z-index: 1000;
+	height-min: 760px;
+	@include media(500px) {
+		// background-size: 780px auto;
+	}
+	@include media($tablet) {
+		padding-top: 0;
+		background: #e9f1ed url("images/bg-welcome.jpg") top center no-repeat;
+		background-size: 138% auto;
+		// height: 550px;
+		max-height: none;
+	}
+	@include media($desktop) {
+		background: none;
+		height: 100vh;
+		min-height: 768px;
+	}
+}
+
+.welcome-logo {
+	background: $lightColor;
+	margin-top: 70px;
+	@include media($tablet) {
+		display: none
+	}
+	img {
+		width: 320px;
+	}
+}
+
+.welcome .welcome-cta {
+	margin-top: 0px;
+	padding-top: 350px;
+	text-align: center;
+	padding-bottom: 20px;
+	// background-color: $lightColor;
+	@include media($tablet) {
+		margin-top: 0;
+		width: 440px;
+		height: 780px;
+		background: none;
+		padding-top: 220px;
+		padding-left: 50px;
+	}
+	@include media($desktop) {
+		// border: 1px solid red;
+		width: 800px;
+		padding-top: 35vh;
+		margin-left: 2vw;
+	}
+	@include media(1350px) {
+		// margin-left: 10vw;
+	}
+	h2 {
+		background: rgba( $lightColor, .8 );
+		padding: 10px 20px;
+		text-align: center;
+		font-size: 30px;
+		line-height: 34px;
+		@include media($tablet) {
+			background: transparent;
+			padding: 0px;
+			font-size: 38px;
+			line-height: 45px;
+		}
+		@include media($desktop) {
+			// padding-left: 0;
+			// padding-right: 0;
+			font-size: 80px;
+			line-height: 89px;
+		}
+		span {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			display: block;
+			font-size: 13px;
+			@include media($tablet) {
+				margin-top: 10px;
+				margin-bottom: 40px;
+				font-size: 18px;
+				line-height: 22px;
+			}
+			@include media($desktop) {
+				font-size: 34px;
+				line-height: 32px;
+			}
+		}
+	}
+	p {
+		padding-top: 20px;
+		background: $lightColor;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 10px;
+		@include media($tablet) {
+			padding-top: 0;
+			background: transparent;
+		}
+		@include media($desktop) {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+	}
+	.button {
+		margin-top: 10px;
+		// margin-bottom: 30px;
+
+		@include media($tablet) {
+			margin-top: 20px;
+		}
+	}
+}
+
+
+/*===================================
+=            home-doctor            =
+===================================*/
+
+.home-doctor {
+	position: relative;
+	text-align: left;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	position: relative;
+	background-color: #f1efec;
+	// background: #9fb9c7 url("images/bg-doctor.jpg") center center no-repeat;
+	overflow: hidden;
+	background-repeat: no-repeat;
+
+	@include media($tablet) {
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+	@include media($desktop) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		height: 670px;
+	}
+	@include media($full) {
+		background-size: cover;
+	}
+	h2 {
+		margin-bottom: 20px;
+		@include media($tablet) {
+			margin-bottom: 40px;
+		}
+		@include media($desktop) {
+			font-size: 50px;
+			line-height: 55px;
+		}
+		span:nth-of-type(1) {
+			display: block;
+			color: $secondaryAlt;
+			font-size: 20px;
+			line-height: 22px;
+			margin-bottom: 10px;
+		}
+		span:nth-of-type(2) {
+			color: $secondaryAlt;
+		}
+	}
+	p {
+		text-shadow: 1px 1px 4px $lightColor;
+	}
+	p a {
+		color: $primaryColor;
+		text-decoration: underline;
+	}
+	.doc-content {
+			padding-right: 30%;
+		@include media($tablet) {
+			padding-right: 0;
+			padding-left: 50%;
+		}
+		@include media($desktop) {
+		}
+		img.doc-image {
+			width: 160px;
+			position: absolute;
+			bottom: 0px;
+			right: 10px;
+			z-index: 2;
+			@include media(375px) {
+				// width: 180px;
+			}
+			@include media(480px) {
+				// right: calc(50% - 200px;);
+			}
+			@include media($tablet) {
+				width: 410px;
+				position: absolute;
+				left: calc(50% - 450px;);
+				bottom: 0px;
+			}
+			@include media($desktop) {
+				width: auto;
+				position: absolute;
+				left: calc(50% - 550px;)
+			}
+		}
+	}
+	.button {
+		margin-top: 30px;
+	}
+}
+
+
+
+/*====================================
+=            home-aboutus            =
+====================================*/
+
+.home-aboutus {
+	background-position: top center;
+	background-size: 90vw auto;
+	background-repeat: no-repeat;
+	// background-position-y: top 40px; 
+	// background-position-x: right 40px;
+	margin-top: 20px; 
+	padding-top: 115vw ;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	@include media($tablet) {
+	background-position-y: top 40px; 
+		margin-top: 0;
+	}
+
+	@include media($desktop) {
+		padding-top: 150px;
+		padding-bottom: 150px;
+		background-size: 50% auto;
+		background-position: center right;
+		background-position-y: 60px; 
+		background-position-x: right 60px; 
+		padding-left: 40px;
+		// padding-right: 67%;
+		padding-right: 60%;
+	}
+	@include media($full) {
+		padding-top: 300px;
+		padding-bottom: 350px;
+		// background-size: auto auto;
+		padding-left: 0;
+		padding-right: 50%;
+	}
+	p {
+		text-align: left;
+		margin: 0 auto;
+		margin-top: 30px;
+		@include media(1450px) {
+			max-width: 600px;
+		}
+	}
+	.button {
+		margin-top: 30px;
+	}
+}
+
+
+
+
+/*================================================
+=            home-featured-procedures            =
+================================================*/
+
+.home-featured-procedures {
+	// background: #c9cfc6;
+	ul {
+		margin: 0;
+		color: $lightColor;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		@include media($tablet) {
+			flex-wrap: nowrap;
+			justify-content: center;
+		}
+	}
+	li {
+		width: 50%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: all .35s ease-in-out;
+		position: relative;
+		height: 250px;
+		@include media($tablet) {
+			width: 25%;
+			height: 450px;
+			padding-left: 10px;
+			padding-right: 10px;
+			// padding-top: 250px;
+			// padding-bottom: 80px;
+		}
+		@include media($desktop) {
+		}
+		.feat-overlay {
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transition: all .35s ease-in-out;
+			background: transparent;
+			overflow: hidden;
+			.feat-links {
+				padding-top: 40px;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				flex-direction: column;
+				transition: all .35s ease-in-out;
+				top: -140px;
+				position: relative;
+				opacity: 0;
+			}
+			a {
+				margin-bottom: 10px;
+				color: $primaryColor;
+				text-transform: uppercase;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.proced-name {
+			left: 0;
+			right: 0;
+			bottom: 0px;
+			width: 100%;
+			position: absolute;
+			height: 70px;
+			background-color: $primaryColor;
+			font-family: $secondaryFont;
+			color: $lightColor;
+			font-size: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all .35s ease-in-out;
+			font-size: 25px;
+			@include media($desktop) {
+				font-size: 32px;
+			}
+			a {
+				color: $lightColor;
+				text-decoration: none;
+			}
+
+		}
+		@include media($desktop) {
+		&:hover {
+			span {
+				opacity: 1;
+			}
+			.the-seth-button,
+			.the-seth-button-again {
+				background: #bd813e;
+				box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+
+			}
+			.the-seth-button-again {
+				border: 1px solid rgba($lightColor, .2);
+			}
+
+			.feat-overlay {
+				background: rgba( #fff, .4);
+			}
+			.proced-name {
+				background:  #c9cfc6;
+			}
+			.feat-links {
+				opacity: 1;
+				margin-top: 0px;
+				top: 0px;
+			}
+		}
+		}
+	}
+}
+
+
+
+
+.home-featured-breast {
+	background-color: #4a5767;
+	background-position: top center;
+	background-position-x: -100px; 
+	background-repeat: no-repeat;
+	background-size: auto 320px;
+	color: $lightColor;
+	padding-top: 350px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	@include media($tablet) {
+		background-size: auto;
+		background-position: center center;
+		min-height: 625px;
+		padding-top: 150px;
+		padding-left: 50%;
+	}
+	span {
+		color: $secondaryAlt;
+		text-transform: uppercase;
+		font-family: $secondaryFont;
+		font-size: 20px;
+		letter-spacing: 2px;
+	}
+	h2 {
+		margin-bottom: 30px;
+	}
+	p {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	a {
+		color: $lightColor;
+		text-decoration: underline;
+	}
+	.button {
+		margin-top: 30px;
+		border-bottom: 1px solid $lightColor;
+	}
+	@include media($full) {
+		background-size: cover;
+	}
+}
+
+
+.home-patients {
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	color: $darkColor;
+	padding: 40px 20px;
+	@include media($tablet) {
+		padding: 100px 40px;
+	}
+	@include media($tablet) {
+		display: flex;
+		justify-content: space-between;
+	}
+	@include media($full) {
+		background-size: cover;
+	}
+	> div {
+		width: 100%;
+		height: auto;
+		@include media($tablet) {
+			width: 48%;
+		}
+	}
+	.erins-wrappers {
+		padding: 30px 20px;
+		background: rgba($lightColor, .8);
+		border: 1px solid rgba($secondaryAlt, .4);
+		margin-bottom: 40px;
+		@include media($tablet) {
+			padding: 50px 20px;
+			margin-bottom: 0px;
+		}
+		@include media($desktop) {
+			padding: 50px 40px;
+		}
+		@include media($full) {
+			padding: 50px 100px;
+		}
+	}
+	h2{
+		margin-bottom: 30px;
+	}
+	p {
+		text-align: left;
+		a {color: $lightColor;text-decoration: underline;}
+	}
+	.the-home-location {
+		max-width: 570px;
+		margin: 0 auto;
+		@include media($tablet) {
+		}
+		@include media($desktop) {
+			width: auto;
+		}
+		img {
+			display: block;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+		a {text-decoration: none;}
+		span {text-decoration: underline;}
+	}
+	.home-white-wrap {
+		background: $lightColor;
+		padding: 18px;
+	}
+	.button {
+		margin-top: 30px;
+		@include media($tablet) {
+			margin-top: 40px;
+		}
+	}
+	.results-images {
+		width: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: 50%;
+			height: auto;
+			border: 4px solid $lightColor;
+			@include media($tablet) {
+				width: 100%;
+			}
+		}
+	}
+}
