@@ -1,7 +1,36 @@
 
+	<?php if( get_post_type() != 'post'): ?>
+	<div class="footer-recent-blogs">
+		<div class="the-headline"><span>From Our</span> Blog </div>
+		<div class="blogs">
+			<?php
+				$args = array(
+					'numberposts' => 2,
+					'post_status'=>"publish",
+					'post_type'=>"post",
+					// 'category'=> 55,
+					'orderby'=>"post_date");
+				$postslist = get_posts( $args );
+				echo '<ul class="latest-posts">';
+				foreach ($postslist as $post) :  setup_postdata($post); ?>
+					<li>
+						<a href="<?the_permalink();?>">
+							<div class="thumb"><?php the_post_thumbnail('thumbnail', array( 'alt' => trim(strip_tags( $post->post_title )),)); ?></div>
+							<div class="blog-head"><?the_title();?></div>	
+							<div class="excerpt"><?php my_excerpt(15); ?>
+							<span>Read More</span></div>	
+						</a>
+					</li>
+				<?php endforeach; ?>
+				<?php wp_reset_query(); ?>
+			</ul>
+		</div>
+	</div>
+	<?php endif; ?>
 
 <footer>
 	
+
 	<section class="upper-footer" >
 		<span class="the-headline">Contact Us <span>Today</span>!</span>
 		<div class="footer-splitter">
@@ -41,8 +70,7 @@
 	<section class="footer-map">
 		<?php if(have_rows('locations', 'option')): ?>
 			<?php while(have_rows('locations', 'option')): the_row(); ?>
-				<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer">
-
+				<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank">
 					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php bloginfo('template_directory'); ?>/images/icon-map.jpg" alt="map icon" class="b-lazy">
 				</a>
 			<?php endwhile; ?>
@@ -56,7 +84,7 @@
 				<ul>
 					<?php while(have_rows('footer_logos', 'option')): the_row(); ?>
 						<li>
-							<img data-src="<?php the_sub_field('logo'); ?>" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="top doc logo">
+							<img data-src="<?php the_sub_field('logo'); ?>" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" alt="logos">
 						</li>
 					<?php endwhile; ?>
 				</ul>

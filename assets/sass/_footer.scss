@@ -1,3 +1,97 @@
+
+/*===========================================
+=            Footer Recent Blogs            =
+===========================================*/
+
+
+.footer-recent-blogs {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	@include media($desktop) {
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 90px;
+		padding-bottom: 0px;
+		
+	}
+	// width: 1020px;
+
+	ul {
+		margin: 0;
+		margin-top: 60px;
+		list-style: none;
+		@include media($tablet) {
+			margin-top: 90px;
+			display: flex;
+			// align-items: center;
+			// justify-content: space-around;
+			// flex-direction: column;
+			justify-content: center;
+			// margin: 0 auto;
+			// text-align: center;
+		}
+		@include media($desktop) {
+			// align-items: center;
+			flex-direction: row;
+			justify-content: space-around;
+			
+		}
+	}
+	li {
+		// border: 1px solid red;
+		text-align: left;
+		margin-bottom: 60px;
+		@include media($tablet) {
+			width: 400px;
+			&:first-of-type {
+				margin-right: 80px;
+				@include media($desktop) {
+					margin-right: 0;
+				}
+			}
+		}
+		@include media($desktop) {
+			width: 500px;
+			
+		}
+		span {
+			color: $primaryAlt;
+			text-decoration: underline;
+		}
+
+	}
+	img {
+		width: 110px;
+		height: auto;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		float: left;
+		@include media($tablet) {
+			// margin-bottom: 170px;
+		}
+		@include media($desktop) {
+			margin-bottom: 100px;
+		}
+	}
+	.blog-head {
+		font-size: 20px;
+		margin-bottom: 10px;
+		@include media($tablet) {
+			font-size: 25px;
+		}
+
+	}
+	a {text-decoration: none;}
+}
+
+
+
+
+
 /*====================================
 =            Upper Footer            =
 ====================================*/
@@ -84,7 +178,7 @@
 		}
 		::-webkit-input-placeholder {
 			/* WebKit, Blink, Edge */
-			color: rgba(#fff, 1);
+			color: rgba(#fff, .4);
 			font-family: $primaryFont;
 			// font-size: 14px;
 			// text-transform: uppercase;
@@ -93,7 +187,7 @@
 		}
 		:-moz-placeholder {
 			/* Mozilla Firefox 4 to 18 */
-			color: rgba(#fff, 1);
+			color: rgba(#fff, .4);
 			font-family: $primaryFont;
 			// font-size: 14px;
 			// text-transform: uppercase;
@@ -103,7 +197,7 @@
 		}
 		::-moz-placeholder {
 			/* Mozilla Firefox 19+ */
-			color: rgba(#fff, 1);
+			color: rgba(#fff, .4);
 			font-family: $primaryFont;
 			// font-size: 14px;
 			// text-transform: uppercase;
@@ -113,7 +207,7 @@
 		}
 		:-ms-input-placeholder {
 			/* Internet Explorer 10-11 */
-			color: rgba(#fff, 1);
+			color: rgba(#fff, .4);
 			font-family: $primaryFont;
 			// font-size: 14px;
 			// text-transform: uppercase;

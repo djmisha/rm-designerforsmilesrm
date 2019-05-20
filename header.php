@@ -38,7 +38,7 @@
 			<div class="hamburger"></div>
 			<div class="hamburger"></div>
 			<div class="hamburger"></div>
-			<div class="trigger-text">MENU</div>
+			<!-- <div class="trigger-text">MENU</div> -->
 		</div>
 		<nav>
 			<?php wp_nav_menu( array(

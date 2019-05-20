@@ -1,6 +1,7 @@
 // header,
-.welcome,
-// footer,
+// .welcome-parallax,
+footer,
+.footer-recent-blogs,
 .home-doctor,
 .home-aboutus,
 .home-featured-procedures,
@@ -39,20 +40,20 @@
 }
 
 .welcome {
-	background: #fff url("images/bg-welcome.jpg") top right no-repeat;
+	background: #fff url("images/bg-welcome-tablet.jpg") top right no-repeat;
 	background-size: 760px auto;
-	background-position-y: -40px; 
-		background-position-x: right 0; 
+	// background-position-y: -40px; 
+	background-position-x: right 0; 
 	z-index: 1000;
 	height-min: 760px;
 	@include media(500px) {
 		// background-size: 780px auto;
 	}
+		
 	@include media($tablet) {
-		padding-top: 0;
-		background: #e9f1ed url("images/bg-welcome.jpg") top center no-repeat;
-		background-size: 138% auto;
-		// height: 550px;
+		background: #e9f1ed url("images/bg-welcome-tablet.jpg") top center no-repeat;
+		background-size: cover;
+		height: 1080px;
 		max-height: none;
 	}
 	@include media($desktop) {
@@ -60,80 +61,83 @@
 		height: 100vh;
 		min-height: 768px;
 	}
+	position: relative;
 }
 
 .welcome-logo {
-	background: $lightColor;
-	margin-top: 70px;
-	@include media($tablet) {
-		display: none
+	h1 {
+		margin: 0;
 	}
-	img {
-		width: 320px;
+
+	@include media($tablet) {
+		position: absolute;
+		top: -650px;
+		width: 290px;
+		left: calc(50% - 150px;);
+	}
+	@include media($desktop) {
+		position: relative;
+		width: auto;
+		left: auto;
+		top: auto;
 	}
 }
 
 .welcome .welcome-cta {
 	margin-top: 0px;
-	padding-top: 350px;
+	padding-top: 40px;
 	text-align: center;
 	padding-bottom: 20px;
-	// background-color: $lightColor;
 	@include media($tablet) {
+		background-color: $lightColor;
 		margin-top: 0;
-		width: 440px;
-		height: 780px;
-		background: none;
-		padding-top: 220px;
-		padding-left: 50px;
+		position: absolute;
+		bottom: 0;
+		height: 280px; 
 	}
 	@include media($desktop) {
-		// border: 1px solid red;
+		background: transparent;
+		position: relative;
 		width: 800px;
-		padding-top: 35vh;
+		padding-top: 25vh;
 		margin-left: 2vw;
+		height: auto;
 	}
 	@include media(1350px) {
 		// margin-left: 10vw;
 	}
+
 	h2 {
-		background: rgba( $lightColor, .8 );
+		// background: rgba( $lightColor, .8 );
 		padding: 10px 20px;
 		text-align: center;
 		font-size: 30px;
+		color: $darkColor;
 		line-height: 34px;
+		font-family: $primaryFont;
+		margin-bottom: 30px;
+		margin-top: 30px;
 		@include media($tablet) {
+			font-size: 54px;
+			line-height: 58px;
 			background: transparent;
-			padding: 0px;
-			font-size: 38px;
-			line-height: 45px;
+			color: $lightColor;
+			position: absolute;
+			top: -600px;
+			left: calc(50% - 255px);
+			// right: 50%;
 		}
 		@include media($desktop) {
-			// padding-left: 0;
-			// padding-right: 0;
-			font-size: 80px;
-			line-height: 89px;
-		}
-		span {
-			margin-top: 0px;
-			margin-bottom: 0px;
-			display: block;
-			font-size: 13px;
-			@include media($tablet) {
-				margin-top: 10px;
-				margin-bottom: 40px;
-				font-size: 18px;
-				line-height: 22px;
-			}
-			@include media($desktop) {
-				font-size: 34px;
-				line-height: 32px;
-			}
+			top: auto;
+			left: auto;
+			right: auto;
+			position: relative;
 		}
 	}
 	p {
+		text-align: left;
 		padding-top: 20px;
-		background: $lightColor;
+		color: $darkColor;
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-bottom: 10px;
@@ -142,16 +146,30 @@
 			background: transparent;
 		}
 		@include media($desktop) {
+			color: $lightColor;
 			max-width: 600px;
 			margin: 0 auto;
 		}
 	}
 	.button {
-		margin-top: 10px;
-		// margin-bottom: 30px;
-
+		border: 2px solid rgba($secondaryColor, 1);
+		color: $darkColor;
+		padding-right: 80px;
 		@include media($tablet) {
-			margin-top: 20px;
+			&:first-of-type {
+				margin-right: 10px;
+			}
+		}
+		@include media($desktop) {
+			margin-top: 30px;
+			color: $lightColor;
+			border: 2px solid rgba($lightColor, .5);
+			
+		}
+		img {
+			top: 0px;
+			right: 0px;
+			position: absolute;
 		}
 	}
 }

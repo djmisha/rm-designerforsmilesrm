@@ -6,21 +6,19 @@
 
 
 <div class="welcome-parallax will-parallax parallax-welcome b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-welcome.jpg">
-	<div class="welcome-logo">
-		<?php echo is_front_page() ? '<h1>' : ''; ?>
-		<a href="<?php bloginfo('url'); ?>">
-			<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Designer for Smiles">
-		</a>
-		<?php echo is_front_page() ? '</h1>' : ''; ?>
-		<a href="<?php bloginfo('url'); ?>">
-			<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo">
-		</a>
-	</div>
 	<div class="welcome" id="skiptomaincontent">
 		<div class="welcome-cta">
+			<div class="welcome-logo">
+				<?php echo is_front_page() ? '<h1>' : ''; ?>
+				<a href="<?php bloginfo('url'); ?>">
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Designer for Smiles">
+				</a>
+				<?php echo is_front_page() ? '</h1>' : ''; ?>
+			</div>
 			<h2><?php the_field('welcome_headline'); ?></h2>
 			<?php the_field('welcome_content'); ?>
-			<a href="<?php the_field('gallery_button'); ?>" class="button" rel="nofollow" rel="nofollow">Patient Photo Gallery</a>
+			<a href="<?php the_field('gallery_button'); ?>" class="button" rel="nofollow" rel="nofollow">Make an Appointment <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/icon-cal.png" alt="icon"></a>
+			<a href="<?php the_field('gallery_button'); ?>" class="button" rel="nofollow" rel="nofollow">Smile Gallery <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/icon-photo.png" alt="icon"></a>
 		</div>
 	</div>
 </div> 
