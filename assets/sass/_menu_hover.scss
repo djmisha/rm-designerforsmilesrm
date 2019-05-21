@@ -1,31 +1,30 @@
 $menuHeight : 60px;
 
-header {
-	// position: relative;
-	// border: 1px solid red;
+
+@include media($desktop) {
+	.menu-item-2329 {
+		padding-left: 0px;
+		padding-right: 0px;
+		background: $primaryAlt;
+		&:before {
+		    content: '';
+		    position: absolute;
+		    top: 17px;
+		    right: calc(50% - 12.5px);
+			background-image: url('images/icon-home.png');
+		    background-size: 23px 23px;
+		    width: 23px;
+		    height: 23px;
+		    z-index: 1;
+		}
+		span {
+			// position: absolute;
+			left: -9999px;
+			color: $primaryAlt;
+		}
+	}
 }
 
-.menu-item-2329 {
-	padding-left: 0px;
-	padding-right: 0px;
-	background: $primaryAlt;
-	&:before {
-	    content: '';
-	    position: absolute;
-	    top: 17px;
-	    right: calc(50% - 12.5px);
-		background-image: url('images/icon-home.png');
-	    background-size: 23px 23px;
-	    width: 23px;
-	    height: 23px;
-	    z-index: 1;
-	}
-	span {
-		// position: absolute;
-		left: -9999px;
-		color: $primaryAlt;
-	}
-}
 .hover-menu {
 	// position: absolute;
 	// right: 10px;

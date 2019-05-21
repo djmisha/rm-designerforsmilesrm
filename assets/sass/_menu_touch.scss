@@ -62,7 +62,7 @@
 		.menu-item{
 			> a{
 				padding: 16px 20px;
-				border-bottom: 1px solid rgba($lightColor, .05);
+				// border-bottom: 1px solid rgba($lightColor, .05);
 			}
 		}
 
@@ -145,7 +145,7 @@
 		top: 0px;
 		right: 10px;
 		padding: 14px 10px 7px 15px;
-		color: rgba($secondaryColor, 1); 
+		color: rgba($lightColor, .7); 
 		text-align: center;
 		font-size: 30px; // match to other font-size
 		cursor: pointer;

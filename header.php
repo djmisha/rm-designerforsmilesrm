@@ -72,28 +72,28 @@
 		</div>
 
 		<section class="page-title">
-				<?php if(is_front_page()): ?>
-					<h1><?php // do nothing if homepage  ?></h1>
-				<?php elseif(this_is('gallery-case')): ?>
-					<?php $category_title =  get_the_title($post->in_cat_ID); ?>
-					<h1><?php echo $category_title ?> Gallery</h1>
-				<?php elseif(this_is('gallery-child')): ?>
-					<?php $category_title =  get_the_title($post->in_cat_ID); ?>
-					<h1><?php echo $category_title ?> Gallery</h1>
-				<?php elseif(this_is('gallery')): ?>
-					<h1>Photo Gallery</h1>
-				<?php elseif (is_archive() =='newsroom'): ?>
-					<div class="heading-text">Newsroom</div>
-				<?php elseif (is_search()): ?>
-					<div class="heading-text">Search Results</div>
-				 <?php elseif (is_home() or is_archive()): ?>
-					<div class="heading-text">Blog</div>
-				<?php elseif (is_single()): ?>
-					<div class="heading-text">Blog</div>
-				<?php else: ?> 
-					<h1><?the_title();?></h1>
-				<?php endif; ?>
-				<div class="page-title-split-line"></div>
+			<?php if(is_front_page()): ?>
+				<h1><?php // do nothing if homepage  ?></h1>
+			<?php elseif(this_is('gallery-case')): ?>
+				<?php $category_title =  get_the_title($post->in_cat_ID); ?>
+				<h1><?php echo $category_title ?> Gallery</h1>
+			<?php elseif(this_is('gallery-child')): ?>
+				<?php $category_title =  get_the_title($post->in_cat_ID); ?>
+				<h1><?php echo $category_title ?> Gallery</h1>
+			<?php elseif(this_is('gallery')): ?>
+				<h1>Photo Gallery</h1>
+			<?php elseif (is_archive() =='newsroom'): ?>
+				<div class="heading-text">Newsroom</div>
+			<?php elseif (is_search()): ?>
+				<div class="heading-text">Search Results</div>
+			<?php elseif (is_home() or is_archive()): ?>
+				<div class="heading-text">Blog</div>
+			<?php elseif (is_single()): ?>
+				<div class="heading-text">Blog</div>
+			<?php else: ?> 
+				<h1><?the_title();?></h1>
+			<?php endif; ?>
+			<div class="page-title-split-line"></div>
 		</section>
 	<?php endif; ?>
 

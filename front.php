@@ -24,6 +24,30 @@
 </div> 
 
 
+<section class="home-aboutus b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/icon-dlogo.png">
+	<h2><?php the_field('about_headline'); ?></h2>
+	<div class="the-line"></div>
+	<?php the_field('about_content'); ?>
+</section>
+
+
+<section class="home-doctor home-doctor-parallax will-parallax b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-curves-red.jpg">
+	<div class="doc-content">
+		<img data-src="<?php bloginfo('template_directory'); ?>/images/img-doctors.png" alt="doctor" class="doc-image b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+		<div class="doc-quote">
+			<?php the_field('doctor_cont'); ?>
+		</div>
+	</div>
+	<div class="doc-buttons">
+		<?php if(have_rows('doctor_buttons')): ?>
+			<?php while(have_rows('doctor_buttons')): the_row(); ?>
+				<a href="<?php the_sub_field('link'); ?>" rel="nofollow" class="button"><?php the_sub_field('name'); ?></a>
+			<?php endwhile; ?>
+		<?php endif; ?>
+	</div>	
+</section>
+
+
 <div class="home-featured-procedures">
 	<?php if(have_rows('featured_procedures_1')): ?>
 		<?php $count = 3; ?>
@@ -53,22 +77,8 @@
 </div>
 
 
-<section class="home-doctor home-doctor-parallax will-parallax b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-doctors.jpg">
-	<div class="doc-content">
-		<img data-src="<?php bloginfo('template_directory'); ?>/images/img-doctors.png" alt="doctor" class="doc-image b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-		<h2><?php the_field('doctor_head'); ?></h2>
-		<?php the_field('doctor_cont'); ?>
-		<a href="<?php the_field('meet_dr_scholer_button'); ?>" rel="nofollow" class="button">Meet Dr. Schooler</a>
-	</div>
-</section>
 
 
-<div class="home-aboutus b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-about.jpg">
-	<h2><?php the_field('about_headline'); ?></h2>
-	<?php the_field('about_content'); ?>
-	<a href="<?php the_field('about_learn_more_button'); ?>" class="button" rel="nofollow" name="Learn More">Learn More</a>
-
-</div>
 
 
 <div class="home-patients b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-patients.jpg">
