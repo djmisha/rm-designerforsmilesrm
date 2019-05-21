@@ -10,8 +10,8 @@
 
 	<?php if(!is_404()): ?>
 		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:300,400,400i|Playfair+Display:400,400i,700i' ); ?>
+		<link rel="stylesheet" href="https://use.typekit.net/dkt8jdc.css">
 	<?php endif; ?>
-
 	<?php wp_head()?>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->

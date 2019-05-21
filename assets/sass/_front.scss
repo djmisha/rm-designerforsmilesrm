@@ -45,7 +45,7 @@ footer,
 		background-position-y: top -20vw; 
 	}
 	@include media($tablet) {
-		background: #e9f1ed url("images/bg-welcome-tablet.jpg") top center no-repeat;
+		background: #fff url("images/bg-welcome-tablet.jpg") top center no-repeat;
 		background-size: 110vw auto;
 		background-position-y: calc(20% + 00px); 
 		height: 1080px;
@@ -166,7 +166,6 @@ footer,
 			margin-bottom: 10px;
 			@include media($tablet) {
 				margin-bottom: 0px;
-				
 			}
 		}
 
@@ -180,7 +179,6 @@ footer,
 			margin-top: 30px;
 			color: $lightColor;
 			border: 2px solid rgba($lightColor, .5);
-			
 		}
 		img {
 			top: 0px;
@@ -251,65 +249,113 @@ footer,
 	padding-top: 40px;
 	padding-bottom: 40px;
 	position: relative;
-	border: 1px solid red;
+	// border: 1px solid red;
 	overflow: hidden;
 	background-repeat: no-repeat;
-
 	@include media($tablet) {
 		padding-top: 40px;
+		background-size: 135vw auto;
 	}
 	@include media($desktop) {
-		
 		height: 920px;
 	}
-	@include media($full) {
-		background-size: cover;
+	@include media(1680px) {
+		// background-position: top center;
+		height: 980px;
+		// background-size: cover;
+		// background-position-y: 200px; 
+	}
+	.doc-quote {
+		font-family: $secondaryFont;
+		font-size: 24px;
+		line-height: 44px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		@include media($tablet) {
+			padding-top: 26vw;
+			padding-bottom: 0px;
+			padding-right: 53%;
+			font-size: 30px;
+			line-height: 45px;
+		}
+		@include media($desktop) {
+			padding-top: 320px;
+			padding-right: 0;
+			width: 475px;
+			font-size: 40px;
+			line-height: 55px;
+		}
+		@include media(1680px) {
+			padding-top: 450px;
+		}
+		z-index: 1;
+		position: relative;
+		&:before {
+			z-index: -1;
+			content: '';
+			background: #fff url("images/icon-quote.png") top center no-repeat;
+			position: absolute;
+			background-size: 199px 139px;
+			width: 199px;
+			height: 139px;
+			@include media($desktop) {
+				top: 300px;
+				left: calc( 50% - 100px);
+			}
+		}
 	}
 	
 	img.doc-image {
-		width: 160px;
-		position: absolute;
-		bottom: 0px;
-		right: 10px;
-		z-index: 2;
-		@include media(375px) {
-			// width: 180px;
-		}
-		@include media(480px) {
-			// right: calc(50% - 200px;);
-		}
+		width: 100%;
 		@include media($tablet) {
-			width: 410px;
+			width: 340px;
 			position: absolute;
-			left: calc(50% - 450px;);
-			top: 80px;
+			right: 30px;
+			top: 50px;
 		}
 		@include media($desktop) {
+			top: 70px;
 			width: auto;
 			position: absolute;
 			left: auto;
 			right: calc(50% - 550px;)
 		}
 	}
-
 	.button {
 		color: $lightColor;
 		background: $primaryColor;
-		margin-top: 30px;
 	}
-
 	.doc-buttons {
-		border: 1px solid red;
-		// width: 100%;
-		// display: flex;
-		// justify-content: space-around;
+		@include media($tablet) {
+			padding-top: 40px;
+		}
 		@include media($desktop) {
+			padding-top: 440px;
+			justify-content: space-between;
+			display: flex;
+			width: 1020px;
 			position: absolute;
 			bottom: 50px;
+			> a {
+				width: 32%;
+			}
+		}
+		a {
+			display: block;
+			margin-bottom: 10px; 
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			@include media($desktop) {
+				margin-bottom: 0;
+				display: inline-block;
+			}
+			&:hover {
+				background-color: $secondaryColor;
+			}
 		}
 	}
 }
-
 
 
 

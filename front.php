@@ -30,7 +30,6 @@
 	<?php the_field('about_content'); ?>
 </section>
 
-
 <section class="home-doctor home-doctor-parallax will-parallax b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-curves-red.jpg">
 	<div class="doc-content">
 		<img data-src="<?php bloginfo('template_directory'); ?>/images/img-doctors.png" alt="doctor" class="doc-image b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
@@ -46,7 +45,6 @@
 		<?php endif; ?>
 	</div>	
 </section>
-
 
 <div class="home-featured-procedures">
 	<?php if(have_rows('featured_procedures_1')): ?>
