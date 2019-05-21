@@ -30,7 +30,7 @@
 	<?php the_field('about_content'); ?>
 </section>
 
-<section class="home-doctor home-doctor-parallax will-parallax b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-curves-red.jpg">
+<section class="home-doctor b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-curves-red.jpg">
 	<div class="doc-content">
 		<img data-src="<?php bloginfo('template_directory'); ?>/images/img-doctors.png" alt="doctor" class="doc-image b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
 		<div class="doc-quote">
@@ -46,25 +46,17 @@
 	</div>	
 </section>
 
-<div class="home-featured-procedures">
+
+
+<div class="home-featured-procedures b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-curves-yellow.jpg">
 	<?php if(have_rows('featured_procedures_1')): ?>
 		<?php $count = 3; ?>
 		<ul>
 			<?php while(have_rows('featured_procedures_1')): the_row(); ?>
 				<li style="background-image: url('<?php the_sub_field('image'); ?>');" class="wow fadeIn" data-wow-offset="20" data-wow-delay=".<?echo $count; ?>0s" data-wow-duration=".5s" >
-					<div class="feat-overlay">
-						<div class="feat-links">
-							<?php if(have_rows('procedure_links')): ?>
-								<?php while(have_rows('procedure_links')): the_row(); ?>
-									<a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('text'); ?></a>
-									<?php the_sub_field(''); ?>
-								<?php endwhile; ?>
-							<?php endif; ?>
-						</div>
-					</div>
 					<div class="proced-name">
 						<a href="<?php the_sub_field('headline_link'); ?>">
-							<?php the_sub_field('headline'); ?>
+							<span><?php the_sub_field('headline'); ?></span>
 						</a>
 					</div>
 				</li>
@@ -75,54 +67,18 @@
 </div>
 
 
-
-
-
-
-<div class="home-patients b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-patients.jpg">
-	<div class="erins-wrappers">
-		<div class="the-home-location">
-			<h2>Our Location</h2>
-			<div class="home-white-wrap">
-				<?php if(have_rows('locations', 'option')): ?>
-					<?php while(have_rows('locations', 'option')): the_row(); ?>
-						<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
-							<img src="<?php bloginfo('template_directory'); ?>/images/icon-map.jpg" data-src="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-							<?php the_sub_field('address', 'option'); ?><br /> 
-							<?php the_sub_field('city', 'option'); ?><br />
-							<span>Map & Directions</span>
-						</a>
-					<?php endwhile; ?>
-				<?php endif; ?>
-			</div>
-			<a href="<?php bloginfo('url'); ?>/contact-us/" class="button" rel="nofollow">Contact Us</a>
-		</div>
-	</div>
-	<div class="the-results">
-		<div class="erins-wrappers">
-			<h2>Patient Gallery</h2>
-			<div class="home-white-wrap">
-				<div class="results-images">
-					<img class="b-lazy" data-src="<?php the_field('before_image'); ?>" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="results before image">
-					<img class="b-lazy" data-src="<?php the_field('after_image'); ?>" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="results after image">
+<div class="home-before-after">
+	<h2><?php the_field('before_after_headline'); ?></h2>
+	<?php if(have_rows('before_afters')): ?>
+		<section class="the-slider owl-carousel">
+			<?php while(have_rows('before_afters')): the_row(); ?>
+				<div class="home-cases">
+					<?php echo the_sub_field('shortcode'); ?>
 				</div>
-				<div class="results-images">
-					<img class="b-lazy" data-src="<?php the_field('before_image_2'); ?>" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="results before image">
-					<img class="b-lazy" data-src="<?php the_field('after_image_2'); ?>" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="results after image">
-				</div>
-			</div>	
-			<a href="<?php bloginfo('url'); ?>/gallery/" class="button" rel="nofollow">View All</a>
-		</div>	
-	</div>	
-</div>	
-
-
-<div class="home-featured-breast b-lazy" data-src="<?php bloginfo('template_directory'); ?>/images/bg-feature.jpg" >
-	<span><?php the_field('breast_feature_subheadline'); ?></span>
-	<h2><?php the_field('breast_feature_headline'); ?></h2>
-	<?php the_field('breast_feature_content'); ?>
-	<a href="<?php the_field('breast_aug_link'); ?>" class="button" rel="nofollow" name="Learn More">Learn More</a>
+			<?php endwhile; ?>
+		</section>
+	<?php endif; ?>
+	<a href="<?php bloginfo('template_directory'); ?>/gallery/" class="button" rel="nofollow">View Our Smile Gallery</a>
 </div>
-
 
 <?php get_footer()?>

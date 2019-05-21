@@ -1,7 +1,7 @@
 <?
 /*
 	RMGALLERY2 : at least V2.1.2
-	example : [bnacase casecount="1" imageset="1" addtags="true" casebtn="true"]
+	example : [bnacase category="" patient="" casecount="1" imageset="1" addtags="true" casebtn="true"]
 */
 add_shortcode('bnacase',function( $atts , $content = null ){
 	extract( shortcode_atts( array(

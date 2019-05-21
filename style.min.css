@@ -262,7 +262,7 @@ p{margin:0 0 1em}
 h2,h3,h4,h5,h6,.the-headline{font-family:"Lato",sans-serif;font-style:italic}
 h2 span,h3 span,h4 span,h5 span,h6 span,.the-headline span{font-style:normal;font-weight:300}
 h2,h3,h4,h5,h6{font-weight:400;margin-bottom:1.5rem;line-height:100%}
-h2,.the-headline{font-size:30px}
+h2,.the-headline{font-size:30px;line-height:40px}
 h3{font-size:26px}
 h4{font-size:24px}
 h5,h6{font-size:22px}
@@ -505,7 +505,6 @@ aside li{width:100%}
 .contact-us .the-hours{display:block;margin-top:40px}
 .gmaps{width:100%;margin-bottom:16px;border:1px solid rgba(0,0,0,0.2)}
 .gmaps iframe{display:block;width:100%;height:200px}
-header,.welcome-parallax,footer,.footer-recent-blogs,.home-aboutus,.home-featured-procedures,.home-featured-breast,.home-patients{display:none !important}
 .welcome{background:#fff url("images/bg-welcome-tablet.jpg") top center no-repeat;background-size:100% auto;background-position-y:top -2vw;z-index:1000;height-min:760px;height:auto;padding-top:500px;position:relative}
 .welcome-logo{position:absolute;top:100px;width:260px;left:calc(50% - 130px)}
 .welcome-logo h1{margin:0}
@@ -520,41 +519,33 @@ header,.welcome-parallax,footer,.footer-recent-blogs,.home-aboutus,.home-feature
 .home-aboutus h2{text-align:center}
 .home-aboutus p a{text-decoration:underline;color:#701b15}
 .home-doctor{position:relative;text-align:left;padding-top:40px;padding-bottom:40px;position:relative;overflow:hidden;background-repeat:no-repeat}
-.home-doctor .doc-quote{font-family:kepler-std-display,serif;font-size:24px;line-height:44px;padding-top:20px;padding-bottom:20px;z-index:1;position:relative}
-.home-doctor .doc-quote:before{z-index:-1;content:'';background:#fff url("images/icon-quote.png") top center no-repeat;position:absolute;background-size:199px 139px;width:199px;height:139px}
+.home-doctor .doc-quote{font-family:kepler-std-display,serif;font-size:24px;line-height:44px;padding-top:20px;padding-bottom:20px;position:relative;z-index:0}
+.home-doctor .doc-quote:before{z-index:-1;content:'';background:#fff url("images/icon-quote.png") top center no-repeat;position:absolute;background-size:199px 139px;width:199px;height:139px;left:-60px}
 .home-doctor img.doc-image{width:100%}
 .home-doctor .button{color:#fff;background:#701b15}
 .home-doctor .doc-buttons a{display:block;margin-bottom:10px}
 .home-doctor .doc-buttons a:last-of-type{margin-bottom:0}
 .home-doctor .doc-buttons a:hover{background-color:#e1ab4c}
 .home-featured-procedures ul{margin:0;color:#fff;list-style:none;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-pack:distribute;justify-content:space-around}
-.home-featured-procedures li{width:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;-webkit-transition:all .35s ease-in-out;transition:all .35s ease-in-out;position:relative;height:250px}
-.home-featured-procedures li .feat-overlay{z-index:-1;top:0;left:0;right:0;bottom:0;width:100%;height:100%;position:absolute;-webkit-transition:all .35s ease-in-out;transition:all .35s ease-in-out;background:transparent;overflow:hidden}
-.home-featured-procedures li .feat-overlay .feat-links{padding-top:40px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-transition:all .35s ease-in-out;transition:all .35s ease-in-out;top:-140px;position:relative;opacity:0}
-.home-featured-procedures li .feat-overlay a{margin-bottom:10px;color:#701b15;text-transform:uppercase;text-decoration:none}
-.home-featured-procedures li .feat-overlay a:hover{text-decoration:underline}
-.home-featured-procedures li .proced-name{left:0;right:0;bottom:0;width:100%;position:absolute;height:70px;background-color:#701b15;font-family:kepler-std-display,serif;color:#fff;font-size:32px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-transition:all .35s ease-in-out;transition:all .35s ease-in-out;font-size:25px}
-.home-featured-procedures li .proced-name a{color:#fff;text-decoration:none}
-.home-featured-breast{background-color:#4a5767;background-position:top center;background-position-x:-100px;background-repeat:no-repeat;background-size:auto 320px;color:#fff;padding-top:350px;padding-bottom:40px;padding-left:20px;padding-right:20px}
-.home-featured-breast span{color:#e8e5e5;text-transform:uppercase;font-family:kepler-std-display,serif;font-size:20px;letter-spacing:2px}
-.home-featured-breast h2{margin-bottom:30px}
-.home-featured-breast p{max-width:600px;margin:0 auto}
-.home-featured-breast a{color:#fff;text-decoration:underline}
-.home-featured-breast .button{margin-top:30px;border-bottom:1px solid #fff}
-.home-patients{background-position:bottom center;background-repeat:no-repeat;color:#000;padding:40px 20px}
-.home-patients>div{width:100%;height:auto}
-.home-patients .erins-wrappers{padding:30px 20px;background:rgba(255,255,255,0.8);border:1px solid rgba(232,229,229,0.4);margin-bottom:40px}
-.home-patients h2{margin-bottom:30px}
-.home-patients p{text-align:left}
-.home-patients p a{color:#fff;text-decoration:underline}
-.home-patients .the-home-location{max-width:570px;margin:0 auto}
-.home-patients .the-home-location img{display:block;margin-bottom:20px;width:100%}
-.home-patients .the-home-location a{text-decoration:none}
-.home-patients .the-home-location span{text-decoration:underline}
-.home-patients .home-white-wrap{background:#fff;padding:18px}
-.home-patients .button{margin-top:30px}
-.home-patients .results-images{width:auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-.home-patients .results-images img{width:50%;height:auto;border:4px solid #fff}
+.home-featured-procedures li{width:50%;background-position:center center;background-repeat:no-repeat;background-size:cover;-webkit-transition:all .35s ease-in-out;transition:all .35s ease-in-out;position:relative;height:250px;position:relative}
+.home-featured-procedures li .proced-name{left:0;right:0;bottom:0;width:100%;position:absolute;height:100%;color:#fff;font-size:18px;font-weight:100;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-transition:all .35s ease-in-out;transition:all .35s ease-in-out}
+.home-featured-procedures li .proced-name a{position:absolute;width:100%;height:100%;color:#fff;text-decoration:none;-webkit-transition:all .2 ease-in-out;transition:all .2 ease-in-out}
+.home-featured-procedures li .proced-name span{position:absolute;height:40px;bottom:10px;left:20px;right:20px;border-bottom:2px solid transparent;-webkit-transition:all .2s ease-out;transition:all .2s ease-out}
+.home-before-after{background:#701b15;padding-top:40px;padding-bottom:40px}
+.home-before-after h2{padding-left:20px;padding-right:20px;color:#fff}
+.home-before-after .button{margin-top:40px;border:2px solid #c6a4a1;color:#fff}
+.home-before-after .home-cases{max-width:500px;max-height:400px;padding:10px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:#fff;width:auto}
+.home-before-after .home-cases img{margin-bottom:0}
+.home-before-after .home-cases .bnacase-imgset:nth-of-type(1) .after{margin-right:10px}
+.home-before-after .home-cases .bnacase-imgset:nth-of-type(1) .before{display:none}
+.home-before-after .home-cases .bnacase-imgset:nth-of-type(2){display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.home-before-after .home-cases .bnacase-imgset:nth-of-type(2) .before img{margin-bottom:10px}
+.home-before-after .the-slider{position:relative;z-index:1;border:1px solid red}
+.home-before-after .owl-prev,.home-before-after .owl-next{width:40px;height:40px;background:#e1ab4c;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-shadow:10px 10px 15px rgba(0,0,0,0.4);box-shadow:10px 10px 15px rgba(0,0,0,0.4)}
+.home-before-after .owl-prev i,.home-before-after .owl-next i{font-size:35px;font-weight:100}
+.home-before-after .owl-prev:hover,.home-before-after .owl-next:hover{color:#e8e5e5}
+.home-before-after .buttons{margin-top:50px}
+.home-before-after .button{margin-bottom:15px;width:100%}
 .blog .content .wp-caption,.tmpl_type_category .content .wp-caption,.tmpl_type_archive .content .wp-caption,.tmpl_type_index .content .wp-caption{padding-top:0;border-radius:0}
 .blog .content .wp-caption .wp-caption-text,.tmpl_type_category .content .wp-caption .wp-caption-text,.tmpl_type_archive .content .wp-caption .wp-caption-text,.tmpl_type_index .content .wp-caption .wp-caption-text{padding:10px;font-size:13px}
 .blog .content .blog-intro,.tmpl_type_category .content .blog-intro,.tmpl_type_archive .content .blog-intro,.tmpl_type_index .content .blog-intro{margin-bottom:40px}
@@ -781,15 +772,16 @@ section,main,.contain{padding:0 40px}
 .home-doctor .doc-quote{padding-top:26vw;padding-bottom:0;padding-right:53%;font-size:30px;line-height:45px}
 .home-doctor img.doc-image{width:340px;position:absolute;right:30px;top:50px}
 .home-doctor .doc-buttons{padding-top:40px}
-.home-featured-procedures ul{-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-.home-featured-procedures li{width:25%;height:450px;padding-left:10px;padding-right:10px}
-.home-featured-breast{background-size:auto;background-position:center center;min-height:625px;padding-top:150px;padding-left:50%}
-.home-patients{padding:100px 40px}
-.home-patients{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
-.home-patients>div{width:48%}
-.home-patients .erins-wrappers{padding:50px 20px;margin-bottom:0}
-.home-patients .button{margin-top:40px}
-.home-patients .results-images img{width:100%}
+.home-featured-procedures{background-position:bottom center;background-position-y:top 120px;background-repeat:no-repeat;padding-top:250px;padding-bottom:50px}
+.home-featured-procedures ul{margin-bottom:100px;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.home-featured-procedures li{width:250px;height:325px;-webkit-box-shadow:10px 10px 15px rgba(0,0,0,0.4);box-shadow:10px 10px 15px rgba(0,0,0,0.4)}
+.home-featured-procedures li:nth-of-type(1){margin-top:-50px}
+.home-featured-procedures li:nth-of-type(2){margin-top:50px}
+.home-featured-procedures li:nth-of-type(3){margin-top:-180px}
+.home-featured-procedures li:nth-of-type(4){margin-top:-80px}
+.home-before-after{padding-top:60px;padding-bottom:100px}
+.home-before-after>section{padding-top:60px;margin-bottom:20px}
+.home-before-after .button{margin-right:50px;width:auto}
 .blog .content .blog-intro,.tmpl_type_category .content .blog-intro,.tmpl_type_archive .content .blog-intro,.tmpl_type_index .content .blog-intro{margin-bottom:80px}
 .blog .content h2,.tmpl_type_category .content h2,.tmpl_type_archive .content h2,.tmpl_type_index .content h2{text-align:left;font-size:35px}
 .blog .post-snippet .thumb,.tmpl_type_category .post-snippet .thumb,.tmpl_type_archive .post-snippet .thumb,.tmpl_type_index .post-snippet .thumb{float:left;width:200px;margin-right:40px}
@@ -875,20 +867,15 @@ aside>div{width:100%}
 .home-aboutus{background-position:top center;background-position-x:calc(50% - 200px)}
 .home-doctor{height:920px}
 .home-doctor .doc-quote{padding-top:320px;padding-right:0;width:475px;font-size:40px;line-height:55px}
-.home-doctor .doc-quote:before{top:300px;left:calc(50% - 100px)}
+.home-doctor .doc-quote:before{left:100px}
 .home-doctor img.doc-image{top:70px;width:auto;position:absolute;left:auto;right:calc(50% - 550px)}
 .home-doctor .doc-buttons{padding-top:440px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;display:-webkit-box;display:-ms-flexbox;display:flex;width:1020px;position:absolute;bottom:50px}
 .home-doctor .doc-buttons>a{width:32%}
 .home-doctor .doc-buttons a{margin-bottom:0;display:inline-block}
-.home-featured-procedures li .proced-name{font-size:32px}
-.home-featured-procedures li:hover span{opacity:1}
+.home-featured-procedures li .proced-name{font-size:24px}
+.home-featured-procedures li:hover span{bottom:40px;opacity:1;border-bottom:2px solid #fff}
 .home-featured-procedures li:hover .the-seth-button,.home-featured-procedures li:hover .the-seth-button-again{background:#bd813e;-webkit-box-shadow:10px 10px 15px rgba(112,27,21,0.3);box-shadow:10px 10px 15px rgba(112,27,21,0.3)}
 .home-featured-procedures li:hover .the-seth-button-again{border:1px solid rgba(255,255,255,0.2)}
-.home-featured-procedures li:hover .feat-overlay{background:rgba(255,255,255,0.4)}
-.home-featured-procedures li:hover .proced-name{background:#c9cfc6}
-.home-featured-procedures li:hover .feat-links{opacity:1;margin-top:0;top:0}
-.home-patients .erins-wrappers{padding:50px 40px}
-.home-patients .the-home-location{width:auto}
 .tmpl_type_single h1{font-size:40px !important;line-height:45px}
 .blog-pagination{margin-top:60px}
 .jump-links-split{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-ms-flex-pack:distribute;justify-content:space-around}
@@ -905,9 +892,7 @@ aside>div{width:100%}
 .flexible-contact{padding-top:90px;padding-bottom:90px}
 .tmpl_type_rmg_single_case .img-wrap{width:90%}
 .tmpl_type_rmg_single_case .patient-details{margin-top:80px;width:70%}
-}@media only screen and (min-width:1480px){.home-featured-breast{background-size:cover}
-.home-patients{background-size:cover}
-.home-patients .erins-wrappers{padding:50px 100px}
+}@media only screen and (min-width:1480px){.home-featured-procedures{background-size:135vw auto}
 }@media only screen and (min-width:1680px){.home-doctor{height:980px}
 .home-doctor .doc-quote{padding-top:450px}
 }@media only screen and (min-width:1850px){.interior{background-size:cover}
