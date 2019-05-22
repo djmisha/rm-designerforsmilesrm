@@ -30,8 +30,7 @@
 
 <a href="#skiptomaincontent" style="display:none;">Skip to main content</a>
 
-<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header'; ?>" <?php get__header__image(); ?> >
-<!-- <header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header b-lazy will-parallax parallax-internal-header'; ?>" <?php get__header__image(); ?> > -->
+<header class="site-header <?php echo is_front_page() ? 'front-header' : 'int-header b-lazy will-parallax parallax-internal-header'; ?>" <?php get__header__image(); ?> >
 
 	<div class="nav-bar">
 		<div class="menu-trigger">
@@ -61,47 +60,47 @@
 	</div>
 
 	<?php 
-		// Inside Page Title
+		// Inside Page Loho 
 		if(!is_front_page()): 
 	 ?>
-
 		<div class="inside-logo">
 			 <a href="<?php bloginfo('url'); ?>">
 			 	<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo">
 			 </a>
 		</div>
 
-		<section class="page-title">
-			<?php if(is_front_page()): ?>
-				<h1><?php // do nothing if homepage  ?></h1>
-			<?php elseif(this_is('gallery-case')): ?>
-				<?php $category_title =  get_the_title($post->in_cat_ID); ?>
-				<h1><?php echo $category_title ?> Gallery</h1>
-			<?php elseif(this_is('gallery-child')): ?>
-				<?php $category_title =  get_the_title($post->in_cat_ID); ?>
-				<h1><?php echo $category_title ?> Gallery</h1>
-			<?php elseif(this_is('gallery')): ?>
-				<h1>Photo Gallery</h1>
-			<?php elseif (is_archive() =='newsroom'): ?>
-				<div class="heading-text">Newsroom</div>
-			<?php elseif (is_search()): ?>
-				<div class="heading-text">Search Results</div>
-			<?php elseif (is_home() or is_archive()): ?>
-				<div class="heading-text">Blog</div>
-			<?php elseif (is_single()): ?>
-				<div class="heading-text">Blog</div>
-			<?php else: ?> 
-				<h1><?the_title();?></h1>
-			<?php endif; ?>
-			<div class="page-title-split-line"></div>
-		</section>
 	<?php endif; ?>
 
 </header> 
 
-<?php if(!is_front_page() ): // Inside Page Breadcrumbs  ?>
-<section class="site-crumbs">
-	<?php echo __salaciouscrumb(); ?>
+<?php if(!is_front_page() ): // Inside Page and H1 ?>
+<!-- <section class="site-crumbs">
+	<?php //echo __salaciouscrumb(); ?>
+</section> -->
+
+<section class="page-title">
+	<?php if(is_front_page()): ?>
+		<h1><?php // do nothing if homepage  ?></h1>
+	<?php elseif(this_is('gallery-case')): ?>
+		<?php $category_title =  get_the_title($post->in_cat_ID); ?>
+		<h1><?php echo $category_title ?> Gallery</h1>
+	<?php elseif(this_is('gallery-child')): ?>
+		<?php $category_title =  get_the_title($post->in_cat_ID); ?>
+		<h1><?php echo $category_title ?> Gallery</h1>
+	<?php elseif(this_is('gallery')): ?>
+		<h1>Photo Gallery</h1>
+	<?php elseif (is_archive() =='newsroom'): ?>
+		<div class="heading-text">Newsroom</div>
+	<?php elseif (is_search()): ?>
+		<div class="heading-text">Search Results</div>
+	<?php elseif (is_home() or is_archive()): ?>
+		<div class="heading-text">Blog</div>
+	<?php elseif (is_single()): ?>
+		<div class="heading-text">Blog</div>
+	<?php else: ?> 
+		<h1><?the_title();?></h1>
+	<?php endif; ?>
+	<div class="page-title-split-line"></div>
 </section>
 <?php endif; ?>
 

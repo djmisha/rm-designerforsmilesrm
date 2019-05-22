@@ -78,7 +78,9 @@
 			<?php endwhile; ?>
 		</section>
 	<?php endif; ?>
-	<a href="<?php bloginfo('template_directory'); ?>/gallery/" class="button" rel="nofollow">View Our Smile Gallery</a>
+	<section>
+		<a href="<?php bloginfo('template_directory'); ?>/gallery/" class="button" rel="nofollow">View Our Smile Gallery</a>
+	</section>
 </div>
 
 <?php get_footer()?>

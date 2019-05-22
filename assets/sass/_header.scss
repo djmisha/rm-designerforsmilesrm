@@ -144,21 +144,16 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 150px;
-	margin-top: 125px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	// justify-content: center;
+	// flex-direction: column;
 	@include media($tablet) {
-		margin-top: 60px;
-		// background-position-y: 50px;
 		padding-top: 0;
 		background-size: cover;
-		height: 380px;
+		height: 730px;
 	}
 	@include media($desktop) {
-		padding-top: 0;
-		// margin-top: 130px;
 		background-position: center center;
 	}
 }
@@ -166,13 +161,16 @@
 .inside-logo {
 	display: block;
 	text-align: center;
-	position: absolute;
-	top: 65px;
+	// position: absolute;
+	// top: 65px;
+
 	@include media($tablet) {
-		display: none;
+		position: relative;
+		margin-left: 10vw;
+		// right: calc( 50% + 200px);
 	}
 	img {
-		width: 290px;
+		// width: 290px;
 		margin: 0 auto;
 	}
 }

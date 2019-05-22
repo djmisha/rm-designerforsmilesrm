@@ -49,7 +49,7 @@
 			dots:false,
 			autoplay: true,
 			autoplayTimeout: 9000,
-			smartSpeed: 1000,
+			smartSpeed: 1200,
 			navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 		});
 
