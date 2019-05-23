@@ -1,9 +1,14 @@
 <? get_header();?>
 
+
+<main class="interior">
 <section class="gallery-nav">
-
-	<a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
-
+	<div class="backtogal">
+		<a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a>
+	</div>
+	<div class="single-case-title">
+		<?php the_title(); ?>
+	</div>
 	<div class="gal-prev-next">
 		<?php
 
@@ -17,19 +22,14 @@
 
 	$rmg_case::prev( array(
 		'class' => 'button-rmg button-gallery-prev button' ,
-		'title'  => '&larr; <span>Prev</span>') );
+		'title'  => '<i class="fal fa-angle-left"></i> <span>Prev</span>') );
 
 	$rmg_case::next( array(
 		'class' => 'button-rmg button-gallery-next button' ,
-		'title' => '<span>Next</span> &rarr;') );
+		'title' => '<span>Next</span> <i class="fal fa-angle-right"></i>') );
 		?>
 	</div>
-	<div class="single-case-title">
-		<?php the_title(); ?>
-	</div>
 </section>
-
-<main class="interior">
 	<div class="single-case-content">
 		<div class="single-case-border">
 			<div class="case-wrap">

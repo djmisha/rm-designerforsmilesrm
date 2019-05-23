@@ -74,7 +74,7 @@ a.page-numbers.current,
 	text-align: center;
 	text-decoration: none !important;
 	border: none;
-	color: $primaryColor;
+	color: $lightColor;
 	font-size: 15px;
 	line-height: 25px;
 	text-transform: none;
@@ -84,10 +84,11 @@ a.page-numbers.current,
 	// border-bottom: 1px solid rgba($darkColor, 1);
 	background: $primaryColor;
 	text-transform: uppercase;
-	background: transparent;
+	// background: transparent;
 	&:hover {
 		text-decoration: none;
-		background: $secondaryColor;
+		background: $secondaryAlt;
+		color: $primaryColor;
 	}
 }
 

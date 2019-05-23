@@ -152,6 +152,9 @@
 		padding-top: 0;
 		background-size: cover;
 		height: 730px;
+		.tmpl_type_rmg_single_case & {
+			height: 400px;
+		}
 	}
 	@include media($desktop) {
 		background-position: center center;

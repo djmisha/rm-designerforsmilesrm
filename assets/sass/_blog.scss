@@ -2,7 +2,6 @@
 .tmpl_type_category,
 .tmpl_type_archive,
 .tmpl_type_index {
-	
 	.content {
 		.wp-caption {
 			padding-top: 0px;
@@ -19,27 +18,6 @@
 			}
 		}
 
-		h2 {
-			margin-top: 40px;
-			margin-bottom: 10px;
-			border-bottom: none;
-			@include media($tablet) {
-				text-align: left;
-				font-size: 35px;
-				// line-height: 30px;
-			}
-			@include media($desktop) {
-				// max-width: 950px;
-			}
-			a {
-				font-family: $secondaryFont !important;
-				text-decoration: none;
-				color: $primaryColor;
-				&:hover {
-					color: $primaryColor;
-				}
-			}
-		}
 		a.button {
 			margin-top: 20px;
 			color: $lightColor;
@@ -53,7 +31,7 @@
 			// margin-bottom: 40px;
 		}
 		.thumb {
-			border: 1px solid #ccc;
+			// border: 1px solid #ccc;
 			overflow: hidden;
 			width: 100%;
 			margin-right: 20px;
@@ -61,20 +39,28 @@
 			position: relative;
 			margin-bottom: 20px;
 			@include media($tablet) {
+				margin-bottom: 20px;
 			// float: left;
-			float: left;
+				float: left;
 				width: 200px;
 				margin-right: 40px;
 				// margin-top: -30px;
 				// margin-left: 50px;
 			}
 			@include media($desktop) {
+				margin-bottom: 60px;
 				// margin-right: 80px;
 				// margin-top: 20px;
 			}
 			img {
 				width: 100%;
+				max-width: 200px;
 				height: auto;
+				@include media($tablet) {
+					width: 100%;
+					height: auto;
+					
+				}
 			}
 		}
 		.excerpt {
@@ -88,20 +74,37 @@
 			&:first-of-type {
 				padding-top: 0px;
 			}
+			a  {
+				text-decoration: none;
+			}
 			h2 {
 				margin-top: 0;
+				border-bottom: 0;
+				margin-bottom: 0;
+				padding-bottom: 0px;
+				@include media($tablet) {
+					font-size: 34px;
+					line-height: 44px;
+				}
 			}
 			.para {
-				margin-top: 20px;
-			}
-			.para a {
 				text-decoration: none !important;
 				color: $darkColor;
 				font-weight: $normal;
-
 				span {
 					text-decoration: underline;
-					color: $secondaryColor;
+					color: $primaryColor;
+				}
+			}
+			.blog-split-line {
+				margin: 20px 0px 30px 0px;
+				display: block;
+				height: 5px;
+				// width: calc(100% - 150px);
+				background: $primaryColor;
+				@include media($tablet) {
+				margin: 20px 0px 30px 240px;
+					
 				}
 			}
 			p {
@@ -111,23 +114,12 @@
 		}
 	}
 	.meta-data {
-		// margin-top: 10px;
-		width: auto;
-		display: inline-block;
-		margin-bottom: 10px;
-		color: #c8cdc3;
-		font-size: 15px;
-		// font-weight: bold;
-		text-transform: uppercase;
-		// font-style: italic;
-		@include media($tablet) {
-			// font-size: 18px;
-		}
+		// padding-bottom: 10px;
 		a {
-			color: #c8cdc3 !important;
-			// text-decoration: underline;
-			// font-family: $secondaryFont !important;
-			// color: $primaryColor !important;
+			color: $primaryColor;
+		}
+		span {
+			text-decoration: underline !important;
 		}
 	}
 	.button {
@@ -153,26 +145,7 @@
 			line-height: 45px;
 		}
 	}
-	.meta-data {
-		// margin-top: 10px;
-		width: auto;
-		display: inline-block;
-		margin-bottom: 10px;
-		color: #c8cdc3;
-		font-size: 15px;
-		// font-weight: bold;
-		text-transform: uppercase;
-		// font-style: italic;
-		@include media($tablet) {
-			// font-size: 18px;
-		}
-		a {
-			color: #c8cdc3 !important;
-			text-decoration: none;
-			// font-family: $secondaryFont !important;
-			// color: $primaryColor !important;
-		}
-	}
+
 }
 
 .from-blog {
@@ -201,43 +174,6 @@
 			}
 		}
 	}
-	.prev-blog-button {
-		// &:before {
-		// 	transition: all 0.1s ease-in;
-		// 	content: "\f104";
-		// 	display: inline-block;
-		// 	font: normal normal normal 27px/17px "Font Awesome 5 Pro";
-		// 	position: relative;
-		// 	margin-right: 15px;
-		// 	top: 5px;
-		// 	color: $darkColor;
-		// }
-		// &:hover {
-		// 	color: $darkColor;
-		// 	&:before {
-		// 		color: $darkColor;
-		// 	}
-		// }
-	}
-
-	.next-blog-button {
-		// &:after {
-		// 	transition: all 0.1s ease-in;
-		// 	content: "\f105";
-		// 	display: inline-block;
-		// 	font: normal normal normal 27px/17px "Font Awesome 5 Pro";
-		// 	position: relative;
-		// 	margin-left: 15px;
-		// 	top: 5px;
-		// 	color: $darkColor;
-		// }
-		// &:hover {
-		// 	color: $darkColor;
-		// 	&:after {
-		// 		color: $darkColor;
-		// 	}
-		// }
-	}
 }
 
 
@@ -249,7 +185,7 @@
 }
 .navigation-links {
 	text-align: center;
-		// margin: 0 auto;
+	// margin: 0 auto;
 	// margin-top: 60px;
 	// display: block;
   a.page-numbers {
@@ -266,9 +202,9 @@
     // border-radius: 4px;
   	margin-bottom: 5px;
   	display: inline-block;
-  	color: $darkColor;
+  	color: $lightColor;
     &:hover {
-      // color: $lightColor;
+      color: $primaryColor;
       // background: $fourthFont;
     }
   }

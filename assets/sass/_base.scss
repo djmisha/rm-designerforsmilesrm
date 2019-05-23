@@ -47,7 +47,7 @@ h5,
 h6,
 .the-headline {
 	font-family: $primaryFont;
-	font-style: italic;
+	// font-style: italic;
 	span {
 		font-style: normal;
 		font-weight: 300;
@@ -70,7 +70,7 @@ h2,
 	line-height: 40px;
 	@include media($tablet) {
 		font-size: 44px;
-		line-height: 59px;
+		line-height: 50px;
 	}
 	// @include media($desktop) {
 	// 	font-size: 50px;

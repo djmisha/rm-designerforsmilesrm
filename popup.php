@@ -1,5 +1,5 @@
-<?require( '../../../wp-load.php' );?>
-<?
+<?php require( '../../../wp-load.php' );?>
+<?php 
 	// Popup
 	
 	$url = urldecode($_GET['url']);
@@ -44,9 +44,10 @@
 			/*box-shadow:1px 1px 1px 0px #333;*/
 			font-weight: bold;
 			font-size: 20px;
-
 		}
 	</style>
+
+
 <div id="notice-body">
 	<div id="notice-body-everything">
 		<h2>Notice</h2>

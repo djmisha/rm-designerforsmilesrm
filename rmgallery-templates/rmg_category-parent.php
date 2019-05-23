@@ -3,8 +3,8 @@
 <main class="interior">
 
 <!-- <section class="back-btn"><a href="<?php bloginfo('url'); ?>/gallery/" class="button gallery-button"><i class="fas fa-th"></i> Gallery</a> -->
-<!-- <h2><?php the_title();?></h2> -->
-</section>
+<!-- <h2><div><?php the_title();?></div></h2> -->
+	<!-- </section> -->
 	<section class="gallery-cat-wrap">
 		<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
 				<?php

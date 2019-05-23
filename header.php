@@ -9,7 +9,7 @@
 	<title><?php wp_title(""); ?></title>
 
 	<?php if(!is_404()): ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:300,400,400i|Playfair+Display:400,400i,700i' ); ?>
+		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Playfair+Display:400,400i,700i' ); ?>
 		<link rel="stylesheet" href="https://use.typekit.net/dkt8jdc.css">
 	<?php endif; ?>
 	<?php wp_head()?>
@@ -74,21 +74,21 @@
 </header> 
 
 <?php if(!is_front_page() ): // Inside Page and H1 ?>
-<!-- <section class="site-crumbs">
-	<?php //echo __salaciouscrumb(); ?>
-</section> -->
+<section class="site-crumbs">
+	<?php echo __salaciouscrumb(); ?>
+</section>
 
 <section class="page-title">
 	<?php if(is_front_page()): ?>
 		<h1><?php // do nothing if homepage  ?></h1>
 	<?php elseif(this_is('gallery-case')): ?>
 		<?php $category_title =  get_the_title($post->in_cat_ID); ?>
-		<h1><?php echo $category_title ?> Gallery</h1>
+		<h1><?//php echo $category_title ?> Smile Gallery</h1>
 	<?php elseif(this_is('gallery-child')): ?>
 		<?php $category_title =  get_the_title($post->in_cat_ID); ?>
-		<h1><?php echo $category_title ?> Gallery</h1>
+		<h1><?php //echo $category_title ?> Smile Gallery</h1>
 	<?php elseif(this_is('gallery')): ?>
-		<h1>Photo Gallery</h1>
+		<h1>Smile Gallery</h1>
 	<?php elseif (is_archive() =='newsroom'): ?>
 		<div class="heading-text">Newsroom</div>
 	<?php elseif (is_search()): ?>

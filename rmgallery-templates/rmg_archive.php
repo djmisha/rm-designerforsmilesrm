@@ -7,59 +7,55 @@
 		<?php  echo rmg_archive_content(); ?>
 	</div>
 	
-	<article class="content">
-		
-		<?
-			$cat_cpt = rmg_helpers::$category_cpt_name;
-			
-			$parent = new WP_Query(array(
-		    
-		    'post_type' => $cat_cpt,
-		    'post_parent' => 0,
-		    'orderby' => 'menu_order',
-		    'order' => 'ASC'
-		
-			));
-	
-		?>
+		<section class="gallery-cat-wrap">
+			<?if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+					<?php
+					$limit = 0;// could probably set this as an wp option
+					foreach ($post->cases as $key => $value) {
+						$case_link = $rmg_case::make_case_link(array('position' => $value['position'] , 'category_id' => $post->ID));
+						$case_name = $rmg_case::make_case_name(array('position' => $value['position']));
+						$case_content = $rmg_case::make_case_name(array('position' => $value['post_content']));
 
-		<?if ( have_posts() ) : while ( $parent->have_posts() ) : $parent->the_post();?>
+						$case_content = str_replace('Patient ', '', $case_content);
 
 
-		<?php
-			if(has_post_thumbnail()):
-				$catBg = get_the_post_thumbnail_url( $post->ID);
-			endif;
+						echo '<div class="bna-group">';
+						$i = 0;//required
+						echo '<h2>'.  $case_name .'</h2>';
 
-			$postURL = get_permalink($post->ID);
+						echo '<div class="img-set">';
+						foreach ($value['rmg_case_imgs'] as $img) {
 
-		 ?>
+							// if(!array_search('front', $img)){ continue; } // if the view_name does not equal 'front' then it will skip it till it finds one that does have that view_name
 
-		<div class="cat-container">
-			<!-- <a href="<?php echo $postURL; ?>"> -->
-				<!-- <div class="gallery-section" style="background-image: url(<?php echo $catBg; ?>)"> -->
-				<h2><?php the_title();?></h2>
-				<!-- <span>View Gallery</span> -->
-				<!-- </div> -->
-			<!-- </a> -->
 
-			<ul>
-				<?php
-					$cats = $rmg_cat::children( $post , array('orderby' => 'menu_order' , 'order' => 'ASC' ));//uses get_children , finds the cases & their images and attaches it to the $post object
+								if(!empty($img['before_image_path'])){
+									echo '<a href="' . $case_link . '" class="before-link"><img class="before-img" src="'.$rmg_case::get_image($img['before_image_path'], 'medium') .'" alt=""><div class="bna-label">Before</div></a>';
+								}
 
-					foreach ($cats as $cat => $post) {
-						echo '<li>';
-							echo '<a href="'.get_permalink($post->ID).'">' . get_the_title( $post->ID ) . '</a>';
-						echo '</li>';
+								if(!empty($img['after_image_path'])){
+									echo '<a href="' . $case_link . '" class="after-link"><img class="after-img" src="'.$rmg_case::get_image($img['after_image_path'], 'medium') .'" alt=""><div class="bna-label">After</div></a>';
+								}
+
+								if($i == $limit) break; // if for whatever reason we have more than one front
+
+								$i++;
+
+						}//end of img loop
+
+					// hover overlay
+
+							echo '<div class="hover-overlay"><a href="' . $case_link . '"><i class="fal fa-search"></i></a></div>';
+
+						echo '</div>';
+
+					
+					echo '</div>';
 					}
-				?>
-			</ul> 
+					?>
+			<?endwhile; endif;?>
 
-		</div>
-		
-		<?endwhile; endif;?>
-
-	</article>
+	</section>
 
 	
 </main>

@@ -16,25 +16,28 @@
 	p a, li a{
 		text-decoration: underline;
 		// font-family: $primaryFont;
-		color: #5191b6;
+		color: $primaryColor;
 		&:hover {
 			text-decoration: underline;
 			color: $secondaryColor;
 		}
 	}
 	h2 {
-		color: $secondaryColor;
+		// color: $secondaryColor;
 	}
 	h2,
 	h3,
 	h4,
 	h5,
 	h6 {
-		text-align: center;
-		color: $primaryColor;
-		font-family: $secondaryFont;
+		// text-align: center;
+		color: $darkColor;
+		// font-family: $secondaryFont;
 		font-weight: 100;
+		padding-bottom: 20px;
+		margin-bottom: 25px  	;
 		margin-top: 70px;
+		border-bottom: 5px solid $primaryColor;
 
 	}
 }
@@ -48,10 +51,11 @@ article p ~ h2 {
 }
 
 .page-title {
+	background: transparent;
 	text-align: left;
 	position: relative;
 	padding-bottom: 0;
-	margin-top: 0px;
+	margin-top: 40px;
 	width: 100%;
 	display: inline-block;
 	@include media($tablet) {
@@ -61,21 +65,21 @@ article p ~ h2 {
 	h1 {
 		margin-top: 0;
 		margin-bottom: 0;
-		font-family: $secondaryFont;
-		font-weight: 400;
-		color: $primaryColor;
+		text-align: left;
+		// font-family: $secondaryFont;
+		font-weight: 100;
+		color: $darkColor;
 		display: block !important;
 		// padding-bottom: 30px;
 		font-size: 30px;
 		line-height: 35px;
-		text-align: center;
 		@include media($tablet) {
-			font-size: 60px;
-			line-height: 65px;
+			font-size: 54px;
+			line-height: 60px;
 		}
 		@include media($desktop) {
-			font-size: 87px;
-			line-height: 90px;
+			// font-size: 87px;
+			// line-height: 90px;
 		}
 	}
 }
@@ -84,7 +88,7 @@ article p ~ h2 {
 	margin-top: 0px;
 	padding-top: 10px;
 	padding-bottom: 1px;
-	background: #f6f7f6;
+	// background: #f6f7f6;
 	text-align: left;
 	font-family: $primaryFont;
 	font-size: 10px;
@@ -96,7 +100,7 @@ article p ~ h2 {
 		text-align: center;
 		padding-top: 25px !important;
 		padding-bottom: 10px !important;
-		font-size: 15px;
+		font-size: 12px;
 		line-height: 15px;
 		// margin-bottom: 50px;
 	}
@@ -110,7 +114,7 @@ article p ~ h2 {
 			font-size: 10px;
 			line-height: 14px;
 			@include media($tablet) {
-				font-size: 15px;
+				font-size: 12px;
 				line-height: 15px;
 			}
 		}
@@ -125,11 +129,31 @@ article p ~ h2 {
 	}
 }
 
+body.inside {
+	background: url('images/icon-dlogo.png') top center;
+	background-repeat: no-repeat;
+
+	@include media($tablet) {
+		background-position-y: 810px; 
+		background-position-x:  calc(50% - 240px;); 
+
+		&.tmpl_type_rmg_single_case  {
+				background-position-y: calc(810px - 330px); 
+		}
+	}
+	
+	@include media($tablet) {
+		
+	}
+
+
+
+}
+
 .interior {
 	text-align: left;
-	background: url('images/bg-inside.jpg') bottom center;
 	.tmpl_type_page_landing & {
-		background: none;
+		// background: none;
 	}
 	background-repeat: no-repeat;
 	padding-top: 30px;
@@ -154,19 +178,18 @@ article p ~ h2 {
 			margin: 1em 10px;
 			list-style: none;
 			@include media($tablet) {
-				margin: 3em 100px;
+				margin: 3em 50px;
 			}
 			li {
 				position: relative;
-
 				margin-bottom: 7px;
-				padding-left: 20px;
-				text-transform: uppercase;
-				font-style: italic;
+				padding-left: 30px;
+				// text-transform: uppercase;
+				// font-style: italic;
 				&:before {
 					content: "";
-					color: #c1c9be;
-					background-color: #c1c9be;
+					color: $primaryColor;
+					background-color: $primaryColor;
 					font-weight: $bold;
 					position: absolute;
 					left: 0px;
@@ -185,7 +208,7 @@ article p ~ h2 {
 			counter-reset: item;
 			margin: 1em 10px;
 			@include media($tablet) {
-				margin: 3em 100px;
+				margin: 3em 50px;
 			}
 			> li {
 				display: block;
@@ -199,7 +222,7 @@ article p ~ h2 {
 					position: absolute;
 					content: counter(item) ". ";
 					counter-increment: item;
-					color: #c1c9be;
+					color: $primaryColor;
 					font-weight: bold;
 				}
 			}

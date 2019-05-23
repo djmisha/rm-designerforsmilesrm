@@ -2,7 +2,7 @@ $menuHeight : 60px;
 
 
 @include media($desktop) {
-	.menu-item-2329 {
+	.hover-menu .menu-item-2329 {
 		padding-left: 0px;
 		padding-right: 0px;
 		background: $primaryAlt;
